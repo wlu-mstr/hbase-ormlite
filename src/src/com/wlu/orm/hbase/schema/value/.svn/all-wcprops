@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/5/trunk/src/com/wlu/orm/hbase/schema/value
+END
+FloatValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/src/com/wlu/orm/hbase/schema/value/FloatValue.java
+END
+StringValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/src/com/wlu/orm/hbase/schema/value/StringValue.java
+END
+ValueFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/schema/value/ValueFactory.java
+END
+DoubleValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/src/com/wlu/orm/hbase/schema/value/DoubleValue.java
+END
+IntValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/src/com/wlu/orm/hbase/schema/value/IntValue.java
+END
+NullValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/src/com/wlu/orm/hbase/schema/value/NullValue.java
+END
+Value.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/src/com/wlu/orm/hbase/schema/value/Value.java
+END

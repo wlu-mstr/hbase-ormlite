@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/4/trunk/src/com/wlu/orm/hbase/tests
+END
+Profile.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/4/trunk/src/com/wlu/orm/hbase/tests/Profile.java
+END
+Resume.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/Resume.java
+END
+ResumeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/ResumeTest.java
+END
+DaoTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/DaoTest.java
+END
+LikePages.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/LikePages.java
+END
+Post.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/Post.java
+END
+Resume_WorkExperience.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/Resume_WorkExperience.java
+END
+Resume_Education.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/Resume_Education.java
+END
+Resume_BasicInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/Resume_BasicInfo.java
+END
+DataMapperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/trunk/src/com/wlu/orm/hbase/tests/DataMapperTest.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/6/trunk/src/com/wlu/orm/hbase/tests/User.java
+END
