@@ -1,5 +1,6 @@
 package com.wlu.orm.hbase.dao;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -78,8 +79,13 @@ public class DaoImpl<T> implements Dao<T> {
 	public void DeleteById(Value rowkey) {
 		org.apache.hadoop.hbase.client.Delete delete = new org.apache.hadoop.hbase.client.Delete(
 				rowkey.toBytes());
-		hbaseConnection.Delete(Bytes.toBytes(dataMapperFactory.tablename),
-				delete);
+		try {
+			hbaseConnection.Delete(Bytes.toBytes(dataMapperFactory.tablename),
+					delete);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
@@ -140,6 +146,9 @@ public class DaoImpl<T> implements Dao<T> {
 			e.printStackTrace();
 		} catch (HBaseOrmException e) {
 			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -172,6 +181,9 @@ public class DaoImpl<T> implements Dao<T> {
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		} catch (NoSuchFieldException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

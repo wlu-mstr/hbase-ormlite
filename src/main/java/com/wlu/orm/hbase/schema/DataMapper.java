@@ -1,5 +1,6 @@
 package com.wlu.orm.hbase.schema;
 
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -74,13 +75,24 @@ public class DataMapper<T> {
 			datafieldsToFamilyQualifierValue.get(field).AddToPut(put);
 		}
 
-		connection.Insert(Bytes.toBytes(tablename), put);
+		try {
+			connection.Insert(Bytes.toBytes(tablename), put);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public T QueryById(Value id, HBaseConnection connection) {
 		byte[] rowkey = id.toBytes();
 		Get get = new Get(rowkey);
-		Result result = connection.Query(Bytes.toBytes(tablename), get);
+		Result result = null;
+		try {
+			result = connection.Query(Bytes.toBytes(tablename), get);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		try {
 			return CreateObjectFromResult(result);

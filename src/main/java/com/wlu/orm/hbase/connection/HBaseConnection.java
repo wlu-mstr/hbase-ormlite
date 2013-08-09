@@ -37,15 +37,17 @@ public class HBaseConnection {
 	 * 
 	 * @param tablename
 	 * @param put
+	 * @throws IOException 
 	 */
-	public void Insert(byte[] tablename, Put put) {
+	public void Insert(byte[] tablename, Put put) throws IOException {
 		HTable htable = (HTable) pool.getTable(tablename);
 		try {
 			htable.put(put);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			pool.putTable(htable);
+			//pool.putTable(htable);
+			htable.close();
 		}
 	}
 
@@ -54,20 +56,21 @@ public class HBaseConnection {
 	 * 
 	 * @param tablename
 	 * @param rowkey
+	 * @throws IOException 
 	 */
 	public void Delete(byte[] tablename,
-			org.apache.hadoop.hbase.client.Delete delete) {
+			org.apache.hadoop.hbase.client.Delete delete) throws IOException {
 		HTable htable = (HTable) pool.getTable(tablename);
 		try {
 			htable.delete(delete);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			pool.putTable(htable);
+			htable.close();
 		}
 	}
 
-	public Result Query(byte[] tablename, Get get) {
+	public Result Query(byte[] tablename, Get get) throws IOException {
 		HTable htable = (HTable) pool.getTable(tablename);
 		Result result = null;
 		try {
@@ -76,7 +79,7 @@ public class HBaseConnection {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			pool.putTable(htable);
+			htable.close();
 		}
 		return result;
 
