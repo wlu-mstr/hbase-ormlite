@@ -9,9 +9,9 @@
   <classpathentry kind="var" path="M2_REPO/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar" sourcepath="M2_REPO/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar" sourcepath="M2_REPO/asm/asm/3.1/asm-3.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/avro/avro/1.7.3/avro-1.7.3.jar" sourcepath="M2_REPO/org/apache/avro/avro/1.7.3/avro-1.7.3-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/org/apache/avro/avro/1.7.4/avro-1.7.4.jar" sourcepath="M2_REPO/org/apache/avro/avro/1.7.4/avro-1.7.4-sources.jar">
     <attributes>
-      <attribute value="jar:file:/root/.m2/repository/org/apache/avro/avro/1.7.3/avro-1.7.3-javadoc.jar!/" name="javadoc_location"/>
+      <attribute value="jar:file:/root/.m2/repository/org/apache/avro/avro/1.7.4/avro-1.7.4-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar" sourcepath="M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-sources.jar"/>
@@ -29,6 +29,11 @@
   <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar" sourcepath="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar">
     <attributes>
       <attribute value="jar:file:/root/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar" sourcepath="M2_REPO/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/root/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar" sourcepath="M2_REPO/commons-configuration/commons-configuration/1.6/commons-configuration-1.6-sources.jar"/>
@@ -77,30 +82,14 @@
       <attribute value="jar:file:/root/.m2/repository/com/google/guava/guava/11.0.2/guava-11.0.2-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-annotations/2.0.0-cdh4.2.1/hadoop-annotations-2.0.0-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-annotations/2.0.0-cdh4.2.1/hadoop-annotations-2.0.0-cdh4.2.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-annotations/2.0.0-cdh4.2.1/hadoop-annotations-2.0.0-cdh4.2.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-auth/2.0.0-cdh4.2.1/hadoop-auth-2.0.0-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-auth/2.0.0-cdh4.2.1/hadoop-auth-2.0.0-cdh4.2.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-auth/2.0.0-cdh4.2.1/hadoop-auth-2.0.0-cdh4.2.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-common/2.0.0-cdh4.2.1/hadoop-common-2.0.0-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-common/2.0.0-cdh4.2.1/hadoop-common-2.0.0-cdh4.2.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-common/2.0.0-cdh4.2.1/hadoop-common-2.0.0-cdh4.2.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-core/2.0.0-mr1-cdh4.2.1/hadoop-core-2.0.0-mr1-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-core/2.0.0-mr1-cdh4.2.1/hadoop-core-2.0.0-mr1-cdh4.2.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-hdfs/2.0.0-cdh4.2.1/hadoop-hdfs-2.0.0-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-hdfs/2.0.0-cdh4.2.1/hadoop-hdfs-2.0.0-cdh4.2.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-hdfs/2.0.0-cdh4.2.1/hadoop-hdfs-2.0.0-cdh4.2.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-tools/2.0.0-mr1-cdh4.2.1/hadoop-tools-2.0.0-mr1-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-tools/2.0.0-mr1-cdh4.2.1/hadoop-tools-2.0.0-mr1-cdh4.2.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-annotations/2.0.0-cdh4.3.0/hadoop-annotations-2.0.0-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-annotations/2.0.0-cdh4.3.0/hadoop-annotations-2.0.0-cdh4.3.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-auth/2.0.0-cdh4.3.0/hadoop-auth-2.0.0-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-auth/2.0.0-cdh4.3.0/hadoop-auth-2.0.0-cdh4.3.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-common/2.0.0-cdh4.3.0/hadoop-common-2.0.0-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-common/2.0.0-cdh4.3.0/hadoop-common-2.0.0-cdh4.3.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-core/2.0.0-mr1-cdh4.3.0/hadoop-core-2.0.0-mr1-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-core/2.0.0-mr1-cdh4.3.0/hadoop-core-2.0.0-mr1-cdh4.3.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-hdfs/2.0.0-cdh4.3.0/hadoop-hdfs-2.0.0-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-hdfs/2.0.0-cdh4.3.0/hadoop-hdfs-2.0.0-cdh4.3.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/hadoop/hadoop-tools/2.0.0-mr1-cdh4.3.0/hadoop-tools-2.0.0-mr1-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/hadoop/hadoop-tools/2.0.0-mr1-cdh4.3.0/hadoop-tools-2.0.0-mr1-cdh4.3.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/hbase/hbase/0.94.2-cdh4.2.1/hbase-0.94.2-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/hbase/hbase/0.94.2-cdh4.2.1/hbase-0.94.2-cdh4.2.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/hbase/hbase/0.94.6-cdh4.3.0/hbase-0.94.6-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/hbase/hbase/0.94.6-cdh4.3.0/hbase-0.94.6-cdh4.3.0-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/github/stephenc/high-scale-lib/high-scale-lib/1.1.1/high-scale-lib-1.1.1.jar" sourcepath="M2_REPO/com/github/stephenc/high-scale-lib/high-scale-lib/1.1.1/high-scale-lib-1.1.1-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.1.3/httpclient-4.1.3.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpclient/4.1.3/httpclient-4.1.3-sources.jar"/>
@@ -198,6 +187,11 @@
   <classpathentry kind="var" path="M2_REPO/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar" sourcepath="M2_REPO/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/xmlenc/xmlenc/0.52/xmlenc-0.52.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/zookeeper/zookeeper/3.4.5-cdh4.2.1/zookeeper-3.4.5-cdh4.2.1.jar" sourcepath="M2_REPO/org/apache/zookeeper/zookeeper/3.4.5-cdh4.2.1/zookeeper-3.4.5-cdh4.2.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/tukaani/xz/1.0/xz-1.0.jar" sourcepath="M2_REPO/org/tukaani/xz/1.0/xz-1.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/root/.m2/repository/org/tukaani/xz/1.0/xz-1.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/zookeeper/zookeeper/3.4.5-cdh4.3.0/zookeeper-3.4.5-cdh4.3.0.jar" sourcepath="M2_REPO/org/apache/zookeeper/zookeeper/3.4.5-cdh4.3.0/zookeeper-3.4.5-cdh4.3.0-sources.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 </classpath>

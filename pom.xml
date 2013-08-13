@@ -15,9 +15,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<hadoop.version>2.0.0</hadoop.version>
-		<cdh.version>cdh4.2.1</cdh.version>
-		<pig.version>0.10.0</pig.version>
-		<hbase.version>0.94.2</hbase.version>
+		<cdh.version>cdh4.3.0</cdh.version>
+		<pig.version>0.11.0</pig.version>
+		<hbase.version>0.94.6</hbase.version>
 	</properties>
 
 	<dependencies>
@@ -93,6 +93,8 @@
 			</exclusions>
 		</dependency>
 
+
+
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>
 			<artifactId>json-lib</artifactId>
@@ -106,7 +108,7 @@
 			<version>11.0.2</version>
 		</dependency>
 
-		
+
 
 		<dependency>
 			<groupId>javax.mail</groupId>
@@ -306,11 +308,12 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-
+		
 		<repository>
-			<id>twitter</id>
-			<url>http://maven.twttr.com</url>
+			<id>cloudera-repo-releases</id>
+			<url>https://repository.cloudera.com/artifactory/repo/</url>
 		</repository>
+
 	</repositories>
 
 </project>
