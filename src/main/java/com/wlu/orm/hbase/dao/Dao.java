@@ -1,7 +1,9 @@
 package com.wlu.orm.hbase.dao;
 
+import java.io.IOException;
 import java.util.List;
 
+import com.wlu.orm.hbase.exceptions.HBaseOrmException;
 import com.wlu.orm.hbase.schema.value.Value;
 
 public interface Dao<T> {
@@ -10,58 +12,49 @@ public interface Dao<T> {
 	 * Create a HBase Table according to it's annotations. <br>
 	 * If the table already exits, delete and then recreate.
 	 * 
-	 * @param clazz
 	 */
-	public void CreateTable();
+	public void createTable() throws IOException;
 
 	/**
 	 * Create a HBase Table according to it's annotations. <br>
 	 * If the table already exits, return.
 	 * 
-	 * @param clazz
 	 */
-	public void CreateTableIfNotExist();
+	public void createTableIfNotExist() throws IOException;
 
 	/**
 	 * Insert one record (row) to HBase table
 	 * 
 	 * @param data
 	 */
-	public void Insert(T data);
+	public void insert(T data) throws HBaseOrmException;
 
-	public void DeleteById(Value rowkey);
+	public void deleteById(Value rowkey) throws HBaseOrmException;
 
 	/**
 	 * delete the whole data from HBase. (delete the row with data's rowkey)
 	 * 
 	 * @param data
 	 */
-	public void DeleteById(T data);
+	public void deleteById(T data) throws HBaseOrmException;
 
 	/**
 	 * Specify field name and delete specific family:qualifier
 	 * 
-	 * @param data
-	 * @param family
-	 * @param qualifier
 	 */
-	public void Delete(T data, String familyFieldName, String qualifierFieldName);
+	public void delete(T data, String familyFieldName, String qualifierFieldName) throws HBaseOrmException;
 
 	/**
 	 * Specify field name and delete whole specific family
-	 * 
-	 * @param data
-	 * @param family
-	 * @param qualifier
 	 */
-	public void Delete(T data, String familyFieldName);
+	public void delete(T data, String familyFieldName) throws HBaseOrmException;
 
 	/**
 	 * Same as DeleteById(T data)
 	 * 
 	 * @param data
 	 */
-	public void Delete(T data);
+	public void delete(T data) throws HBaseOrmException;
 
 	/**
 	 * update the record in table according to data's id (rowkey). <br>
@@ -71,17 +64,17 @@ public interface Dao<T> {
 	 * 
 	 * @param data
 	 */
-	public void Update(T data);
+	public void update(T data) throws HBaseOrmException;
 
 	/**
 	 * 
 	 * @param data
 	 * @param familyFieldName
 	 */
-	public void Update(T data, List<String> familyFieldName);
+	public void update(T data, List<String> familyFieldName) throws HBaseOrmException;
 
 
-	public T QueryById(Value id);
+	public T queryById(Value id) throws HBaseOrmException;
 
 	/**
 	 * Query according to the filter. For filters, such as qualifier filters, we
@@ -93,7 +86,7 @@ public interface Dao<T> {
 	 *            whether need to return the whole object
 	 * @return
 	 */
-	public List<T> QueryWithFilter(String filter, boolean returnWholeObject);
+	public List<T> queryWithFilter(String filter, boolean returnWholeObject);
 
 	/**
 	 * Set returnWholeObject as false for the function above
@@ -101,5 +94,5 @@ public interface Dao<T> {
 	 * @param filter
 	 * @return
 	 */
-	public List<T> QueryWithFilter(String filter);
+	public List<T> queryWithFilter(String filter);
 }

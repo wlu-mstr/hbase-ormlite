@@ -1,5 +1,6 @@
 package com.wlu.orm.hbase.tests;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,10 +15,13 @@ import com.wlu.orm.hbase.schema.DataMapperFacory;
 
 public class DataMapperTest {
 
-	HBaseConnection hbaseconnection = new HBaseConnection(
-			"hadoop008,hadoop009,hadoop010,hadoop006,hadoop007", "2181", 10);
+	HBaseConnection hbaseconnection;
 
-	public void testDataMapper() {
+    public DataMapperTest() throws IOException {
+        hbaseconnection = new HBaseConnection();
+    }
+
+    public void testDataMapper() throws IOException {
 		try {
 			DataMapperFacory<User> UserMapperFactory = new DataMapperFacory<User>(
 					User.class);
@@ -43,7 +47,7 @@ public class DataMapperTest {
 			System.out.println(UserMapperFactory.TableCreateScript());
 			DataMapper<Post> postmapper = PostMapperFactory.Create(new Post());
 			System.out.println(PostMapperFactory.TableCreateScript());
-			dm1.Insert(hbaseconnection);
+			dm1.insert(hbaseconnection);
 
 		} catch (HBaseOrmException e) {
 			e.printStackTrace();

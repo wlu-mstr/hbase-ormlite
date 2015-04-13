@@ -1,5 +1,6 @@
 package com.wlu.orm.hbase.tests;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,11 +15,10 @@ import com.wlu.orm.hbase.schema.value.ValueFactory;
 
 public class DaoTest {
 
-	public void testDao() throws HBaseOrmException {
+	public void testDao() throws HBaseOrmException, IOException {
 		// HBaseConnection hbaseconnection = new HBaseConnection(
 		// "hadoop008,hadoop009,hadoop010,hadoop006,hadoop007", "2181", 10);
-		HBaseConnection hbaseconnection = new HBaseConnection("wlu-hadoop01",
-				"2181", 10);
+		HBaseConnection hbaseconnection = new HBaseConnection();
 
 		Profile p = new Profile("jacky", "14", "Hangzhou, Wen 2 road, #391");
 		HashMap<String, String> mp1 = new HashMap<String, String>();
@@ -41,8 +41,8 @@ public class DaoTest {
 		user.setAlist(userList);
 
 		Dao<User> dao = new DaoImpl<User>(User.class, hbaseconnection);
-		dao.CreateTableIfNotExist();
-		dao.Insert(user);
+		dao.createTableIfNotExist();
+		dao.insert(user);
 		// Delete user's name
 		// dao.Delete(user, "profile", "name");
 		// Delete a page
@@ -54,14 +54,14 @@ public class DaoTest {
 		// dao.Delete(user, "profile", "address");
 
 		@SuppressWarnings("unused")
-		User userq = dao.QueryById(ValueFactory.TypeCreate("1234"));
+		User userq = dao.queryById(ValueFactory.TypeCreate("1234"));
 		System.out.println(userq);
 
 		userq.getProfile().setName("Tomy");
 		List<String> fl = new ArrayList<String>();
 		fl.add("profile");
-		dao.Update(userq, fl);
-		userq = dao.QueryById(ValueFactory.TypeCreate("1234"));
+		dao.update(userq, fl);
+		userq = dao.queryById(ValueFactory.TypeCreate("1234"));
 		System.out.println(userq);
 		// try {
 		//

@@ -1,5 +1,6 @@
 package com.wlu.orm.hbase.tests;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,19 +17,23 @@ public class ResumeTest  {
 	static HBaseConnection hbaseconnection = null;
 	static Dao<Resume> dao = null;
 	static {
-		hbaseconnection = new HBaseConnection("wlu-hadoop01", "2181", 10);
-		try {
+        try {
+            hbaseconnection = new HBaseConnection();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
 			dao = new DaoImpl<Resume>(Resume.class, hbaseconnection);
 		} catch (HBaseOrmException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void testCreateTable() {
-		dao.CreateTableIfNotExist();
+	public void testCreateTable() throws IOException {
+		dao.createTableIfNotExist();
 	}
 
-	public void testInsert() {
+	public void testInsert() throws HBaseOrmException {
 		Resume_BasicInfo jacky_b = new Resume_BasicInfo();
 		jacky_b.setSecond_Name("Jacky");
 		jacky_b.setFirst_Name("Chen");
@@ -58,17 +63,17 @@ public class ResumeTest  {
 		jacky.setEducation(jacky_e);
 		jacky.setWorkExperience(jacky_w);
 
-		dao.Insert(jacky);
+		dao.insert(jacky);
 
 	}
 
-	public void testQuery() {
-		Resume jacky = dao.QueryById(ValueFactory.TypeCreate("00000001234"));
+	public void testQuery() throws HBaseOrmException {
+		Resume jacky = dao.queryById(ValueFactory.TypeCreate("00000001234"));
 		System.out.println(jacky);
 	}
 
-	public void testUpdate() {
-		Resume jacky = dao.QueryById(ValueFactory.TypeCreate("00000001234"));
+	public void testUpdate() throws HBaseOrmException {
+		Resume jacky = dao.queryById(ValueFactory.TypeCreate("00000001234"));
 		System.out.println(jacky);
 		jacky.getBasicInfo().setTelephone_number("010045087");
 		jacky.getBasicInfo()
@@ -78,11 +83,11 @@ public class ResumeTest  {
 		fl.add("basicInfo");
 		fl.add("workExperience");
 
-		dao.Update(jacky, fl);
+		dao.update(jacky, fl);
 		System.out.println(jacky);
 	}
 	
-	public void testDelete(){
-		dao.DeleteById(ValueFactory.TypeCreate("00000001234"));
+	public void testDelete() throws HBaseOrmException {
+		dao.deleteById(ValueFactory.TypeCreate("00000001234"));
 	}
 }

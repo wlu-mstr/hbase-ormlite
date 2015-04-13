@@ -7,7 +7,7 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 import com.wlu.orm.hbase.util.util;
 
-import test.testFields;
+//import test.testFields;
 
 public class ValueFactory {
 
@@ -85,15 +85,15 @@ public class ValueFactory {
 
 	public static void main(String args[]) throws IllegalArgumentException,
 			IllegalAccessException, InvocationTargetException {
-		testFields tf = new testFields("abc", 1, 1.0f, 2d);
-		for (Field field : tf.getClass().getDeclaredFields()) {
-
-			Value v = Create(util.GetFromField(tf, field));
-			if (v == null) {
-				continue;
-			}
-			System.out.println(v.getType());
-		}
+//		testFields tf = new testFields("abc", 1, 1.0f, 2d);
+//		for (Field field : tf.getClass().getDeclaredFields()) {
+//
+//			Value v = Create(util.GetFromField(tf, field));
+//			if (v == null) {
+//				continue;
+//			}
+//			System.out.println(v.getType());
+//		}
 
 	}
 }
