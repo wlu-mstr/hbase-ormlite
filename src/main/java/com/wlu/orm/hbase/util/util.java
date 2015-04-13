@@ -1,12 +1,12 @@
 package com.wlu.orm.hbase.util;
 
+import com.wlu.orm.hbase.tests.Profile;
+import com.wlu.orm.hbase.tests.User;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import com.wlu.orm.hbase.tests.Profile;
-import com.wlu.orm.hbase.tests.User;
 
 public class util {
 	private static String methodFromField(Field field, String prefix) {
