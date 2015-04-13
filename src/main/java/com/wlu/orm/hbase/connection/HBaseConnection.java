@@ -23,14 +23,12 @@ public class HBaseConnection {
 		cfg.set("hbase.zookeeper.quorum", Zk);
 		cfg.set("hbase.zookeeper.property.clientPort", Port);
 		pool = new HTablePool(cfg, PoolSize);
-		try {
-			admin = new HBaseAdmin(cfg);
-		} catch (MasterNotRunningException e) {
-			e.printStackTrace();
-		} catch (ZooKeeperConnectionException e) {
-			e.printStackTrace();
-		}
-	}
+        try {
+            admin = new HBaseAdmin(cfg);
+        } catch (IOException e) {
+            //
+        }
+    }
 
 	/**
 	 * insert put to the table with name <code>tablename</code>
@@ -55,8 +53,7 @@ public class HBaseConnection {
 	 * Delete the whole row of table with name <code>tablename</code>
 	 * 
 	 * @param tablename
-	 * @param rowkey
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public void Delete(byte[] tablename,
 			org.apache.hadoop.hbase.client.Delete delete) throws IOException {

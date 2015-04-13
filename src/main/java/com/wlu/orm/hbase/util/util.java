@@ -1,7 +1,5 @@
 package com.wlu.orm.hbase.util;
 
-import com.wlu.orm.hbase.tests.Profile;
-import com.wlu.orm.hbase.tests.User;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -78,15 +76,15 @@ public class util {
 			SecurityException, IllegalAccessException,
 			InvocationTargetException, NoSuchFieldException,
 			NoSuchMethodException, InstantiationException {
-		User u = new User("string", new Profile("s1", "s2", "s3"), null, 123);
-		System.out.println(u.getProfile());
-		Class profileclazz = Profile.class;
-		Constructor constr = profileclazz.getDeclaredConstructor();
-		constr.setAccessible(true);
-		Object p = constr.newInstance();
-		SetToField(p, Profile.class.getDeclaredField("name"), "this is name");
-
-		SetToField(u, User.class.getDeclaredField("profile"), p);
-		System.out.println(u.getProfile());
+//		User u = new User("string", new Profile("s1", "s2", "s3"), null, 123);
+//		System.out.println(u.getProfile());
+//		Class profileclazz = Profile.class;
+//		Constructor constr = profileclazz.getDeclaredConstructor();
+//		constr.setAccessible(true);
+//		Object p = constr.newInstance();
+//		SetToField(p, Profile.class.getDeclaredField("name"), "this is name");
+//
+//		SetToField(u, User.class.getDeclaredField("profile"), p);
+//		System.out.println(u.getProfile());
 	}
 }
